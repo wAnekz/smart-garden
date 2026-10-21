@@ -1,70 +1,35 @@
-# Academix
+# Smart Garden (JasylJer)
 
-Academix is an Android application designed to help users explore universities in different countries. The app provides a seamless authentication system and allows users to browse a list of universities based on their selected country.
+A prototype system that automates watering of the green areas at Specialized Lyceum No. 165 (Almaty, Kazakhstan). Built for the national "Taza Kazakhstan" eco-initiative.
 
-## Features
+ESP32 boards with soil sensors measure moisture, temperature and light. A Flutter app shows the data and controls watering.
 
-- **User Authentication**
-  * Register using email, password, and name.
-  * Log in using email and password.
-  * Logout option available.
+## What the app does
 
-- **University Exploration**
-  * Select a country to view available universities.
-  * Click on a university to visit its official website.
-  * Change the selected country at any time.
+- Live dashboard of soil moisture, soil temperature and light for each planting zone
+- Watering modes and schedules that skip watering when rain is forecast
+- Digital map of the school's planting zones
+- History of sensor readings
+- AI agronomist chat (Llama 3.3 via the Groq API) that gives plant-care advice based on the current sensor readings
+- Email sign-up and sign-in (Firebase Auth)
 
-## Getting Started
+## Stack
 
-### Prerequisites
-* Android Studio (latest version recommended)
-* Java/Kotlin development environment
-* Android SDK
+Flutter (Dart), Firebase, Groq API (Llama 3.3), ESP32 + soil moisture / temperature / light sensors.
 
-### Installation
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/academix.git
-   ```
-2. **Open the project in Android Studio**
-   * Go to **File > Open** and select the project folder.
-   * Wait for Gradle sync to complete.
-3. **Run the application**
-   * Connect an Android device or use an emulator.
-   * Click on **Run > Run 'app'**.
+## Status
 
-## Build Instructions
+Prototype, work in progress. I had never worked with microcontrollers before this project and learned the hardware side while building it.
 
-### Generate Debug APK
-1. Open **Android Studio**.
-2. Navigate to **Build > Build Bundle(s) / APK(s) > Build APK(s)**.
-3. Once the build is complete, find the APK at:
-   ```
-   app/build/outputs/apk/debug/app-debug.apk
-   ```
+## Run it
 
-### Generate Signed Release APK
-1. Go to **Build > Generate Signed Bundle / APK...**.
-2. Choose **APK** and click **Next**.
-3. Create or select an existing **keystore**, enter credentials.
-4. Select **release** and sign with V1 and V2 signatures.
-5. The signed APK will be generated at:
-   ```
-   app/release/app-release.apk
-   ```
+The Flutter project lives in `Academix/` (the app grew out of my earlier Flutter project of that name).
 
-## Contributing
-Contributions are welcome! Feel free to fork the project and submit a pull request with improvements or bug fixes.
+```bash
+cd Academix
+cp lib/secrets.example.dart lib/secrets.dart   # then paste your Groq API key
+flutter pub get
+flutter run
+```
 
-## License
-This project is licensed under the [MIT License](LICENSE).
-
-## Contact
-For any inquiries or support:
-* **Developer:** Your Name
-* **Email:** dilanabkanov@gmail.com
-* **GitHub:** [wAnekz](https://github.com/wAnekz)
-
----
-Happy coding!
-
+Author: Dilan Abkanov

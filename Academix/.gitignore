@@ -44,3 +44,6 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 /TicTacToeGame
+# Local secrets and build output
+lib/secrets.dart
+/ios/build/

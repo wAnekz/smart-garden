@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.academix</string>
+	<string>com.example.academixx</string>
 	<key>PROJECT_ID</key>
 	<string>academix-e93b7</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1089702330837:ios:c49be0b4b4564f6b077d5c</string>
+	<string>1:1089702330837:ios:f6e5146f65a85dea077d5c</string>
 </dict>
 </plist>
