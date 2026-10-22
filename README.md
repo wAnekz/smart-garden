@@ -2,11 +2,11 @@
 
 A prototype system that automates watering of the green areas at Specialized Lyceum No. 165 (Almaty, Kazakhstan). Built for the national "Taza Kazakhstan" eco-initiative.
 
-ESP32 boards with soil sensors measure moisture, temperature and light. A Flutter app shows the data and controls watering.
+Soil-moisture sensors connected to an ESP32 report how dry the soil is. A Flutter app shows the data and lets the caretaker start watering remotely.
 
 ## What the app does
 
-- Live dashboard of soil moisture, soil temperature and light for each planting zone
+- Live dashboard of sensor readings and the weather
 - Watering modes and schedules that skip watering when rain is forecast
 - Digital map of the school's planting zones
 - History of sensor readings
@@ -15,7 +15,7 @@ ESP32 boards with soil sensors measure moisture, temperature and light. A Flutte
 
 ## Stack
 
-Flutter (Dart), Firebase, Groq API (Llama 3.3), ESP32 + soil moisture / temperature / light sensors.
+Flutter (Dart), Firebase, Groq API (Llama 3.3), ESP32 + soil-moisture sensors.
 
 ## Status
 
